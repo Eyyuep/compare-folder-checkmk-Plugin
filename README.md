@@ -29,8 +29,8 @@ Das Plugin liefert folgende Ergebnisse:
 
 Ein Beispiel-Output des Plugins könnte folgendermaßen aussehen:
 
-```console
-OK - Beide Ordner haben den selben Inhalt
+## console
+```OK - Beide Ordner haben den selben Inhalt```
 
 ## Autor
 Dieses Plugin wurde von [name] entwickelt.
