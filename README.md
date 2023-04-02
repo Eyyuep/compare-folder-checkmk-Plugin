@@ -32,9 +32,9 @@ Ein Beispiel-Output des Plugins könnte folgendermaßen aussehen:
 ```console
 OK - Beide Ordner haben den selben Inhalt
 
-### Autor
+## Autor
 Dieses Plugin wurde von [name] entwickelt.
 
-### Bashskript
+## Bashskript
 Das Bashskript `Backup_comparison.sh` ist ein zusätzliches Skript, das separat installiert werden muss, um die Datei `/usr/lib/check_mk_agent/plugins/backup_check_result.txt` zu generieren, die vom Plugin `compare_files` ausgelesen wird. Hier ist der Inhalt der Datei: `<edit file>`https://github.com/Eyyuep/compare-folder-checkmk-Plugin/blob/main/Backup_comparison.sh`</edit file>`.
 
