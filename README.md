@@ -2,7 +2,7 @@
 Das Repository enthält zwei Skripte: Ein Python-Skript vergleicht Inhalte von Verzeichnissen. Ein Bash-Skript vergleicht Anzahl von Dateien auf einem Server mit lokalem Verzeichnis und schreibt Ergebnisse in eine Datei. Python-Skript liest Datei und generiert Warnungen.
 # Checkmk Plugin: compare_files
 
-Das Checkmk Plugin compare_files überwacht die Inhalte von zwei Ordnern, indem es die Anzahl und die Namen der Dateien in den Ordnern vergleicht. 
+Das Checkmk Plugin `compare_files` überwacht die Inhalte von zwei Ordnern, indem es die Anzahl und die Namen der Dateien in den Ordnern vergleicht. 
 
 ## Installation
 
@@ -20,18 +20,21 @@ Das Plugin überprüft die beiden Ordner, indem es die Ergebnisse aus der Datei 
 
 Das Plugin liefert folgende Ergebnisse:
 
-- OK: Beide Ordner haben den selben Inhalt.
-- WARN: Die Anzahl der Dateien in den Ordnern weicht um 50-99% voneinander ab.
-- CRIT: Die Anzahl der Dateien in den Ordnern weicht um 0-49% voneinander ab.
-- UNKNOWN: Das Plugin konnte die Datei `backup_check_result.txt` nicht finden oder es ist ein unbekannter Fehler aufgetreten.
+- `OK`: Beide Ordner haben den selben Inhalt.
+- `WARN`: Die Anzahl der Dateien in den Ordnern weicht um 50-99% voneinander ab.
+- `CRIT`: Die Anzahl der Dateien in den Ordnern weicht um 0-49% voneinander ab.
+- `UNKNOWN`: Das Plugin konnte die Datei `backup_check_result.txt` nicht finden oder es ist ein unbekannter Fehler aufgetreten.
 
 ## Beispiel
 
 Ein Beispiel-Output des Plugins könnte folgendermaßen aussehen:
 
-"OK - Beide Ordner haben den selben Inhalt"
+```console
+OK - Beide Ordner haben den selben Inhalt
 
+### Autor
+Dieses Plugin wurde von [name] entwickelt.
 
-## Autor
+### Bashskript
+Das Bashskript `Backup_comparison.sh` ist ein zusätzliches Skript, das separat installiert werden muss, um die Datei `/usr/lib/check_mk_agent/plugins/backup_check_result.txt` zu generieren, die vom Plugin `compare_files` ausgelesen wird. Hier ist der Inhalt der Datei: `<edit file>`https://github.com/Eyyuep/compare-folder-checkmk-Plugin/blob/main/Backup_comparison.sh`</edit file>`.
 
-Dieses Plugin wurde von Eyyüp Baran entwickelt.
