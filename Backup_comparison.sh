@@ -5,7 +5,7 @@ REMOTE_HOST="remotehost@192.168.41.131"
 BACKUP_FOLDER="/home/remotehost/Backup-Ordner"
 DOWNLOAD_FOLDER="/home/baran/Download-Ordner"
 
-# Funktion für den SSH-Befehlsblock
+# Funktion für den SSH-Befehlsblock, welche eine detailierte Ausgabe geniert über fehlende Dateien mit Rücksicht auf den Dateinamen
 check_missing_files() {
   ssh -n "$REMOTE_HOST" "cd \"$BACKUP_FOLDER\" && find . -type f" | while read file; do
     if [ ! -f "$DOWNLOAD_FOLDER/$file" ]; then
