@@ -26,7 +26,6 @@ if [ "$backup_count" -ne 0 ]; then
 else
     echo "echo \"<<<compare_files>>>\"" > backup_check_result.txt
     echo "1 - Der Backup-Ordner auf dem entfernten Server ist leer" >> backup_check_result.txt
-    check_missing_files
     exit 1
 fi
 
@@ -34,7 +33,6 @@ fi
 if [ "$backup_count" -eq "$download_count" ]; then
     echo "echo \"<<<compare_files>>>\"" > backup_check_result.txt
     echo "2 - Anzahl der Dateien im Download-Ordner entspricht der Anzahl im Backup-Ordner ($backup_count von $backup_count)" >> backup_check_result.txt
-    check_missing_files
     exit 2
 elif (( $(echo "$match_percent >= 50 && $match_percent < 99" | bc -l) )); then
     echo "echo \"<<<compare_files>>>\"" > backup_check_result.txt
